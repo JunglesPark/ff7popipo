@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Items</title>
+	<link rel="stylesheet" href="style.css">
+	
+</head>
+<body>
+	<div class="container">
+		<h1><a href="index.html">BACK</a></h1>
+	</div>
+	<div class="container">
+		<h1><a id="myBtn">Macbook Pro</a></h1>
+		<div id="myModal" class="modal">
+			<div class="modal-content">
+    			<span class="close">&times;</span>
+    			<img class="center" src="Laptop.png">
+    			<p>This is my macbook, where I do my coding and design, and play WoW.</p>
+  			</div>
+		</div>
+
+		<h1><a id="drinkBtn">Energy Drink</a></h1>	
+		<div id="drinkModal" class="modal">
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<img class="center" src="RedMonsterEnergyDrink.gif">
+				<p>Good ol' reliable energy drink. Chug when low on energy.</p>
+			</div>
+		</div>
+	</div>
+	<script>
+		// Get the modal
+		var modal = document.getElementById("myModal");
+		var drink_modal = document.getElementById("drinkModal")
+		var btn = document.getElementById("myBtn");
+		var drink_btn = document.getElementById("drinkBtn")
+		var span = document.getElementsByClassName("close")[0];
+		var drink_span = document.getElementsByClassName("close")[1];
+		// When the user clicks on the button, open the modal
+		btn.onclick = function() {
+		  modal.style.display = "block";
+		}
+		drink_btn.onclick = function() {
+		  drink_modal.style.display = "block";
+		}
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() {
+		  modal.style.display = "none";
+		}
+		drink_span.onclick = function() {
+		  drink_modal.style.display = "none";
+		}
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+		  if (event.target == modal) {
+		    modal.style.display = "none";
+		  }
+		  if (event.target == drink_modal) {
+		    drink_modal.style.display = "none";
+		  }
+		}
+	</script>
+</body>
+</html>
